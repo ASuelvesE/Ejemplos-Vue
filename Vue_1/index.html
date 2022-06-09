@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app-4">
+
+        <ul>
+            <li class="lis" v-for="item in items" v-on:click="cambio">{{ item.text }} </li>
+        </ul>
+        <div class="segunda">
+            <p>{{ parrafo }}</p>
+            <button v-on:click="saluda">Di hola</button>
+        </div>
+
+        <form action="javascript:void(0);">
+            <label for="">Introduce un nombre</label>
+            <input type="text" name="" id="" v-model="message">
+            <button type="submit" v-on:click="agrega">Agregar</button>
+        </form>
+    </div>
+
+    <div id="app-5">
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
