@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="components/input_reactivo.js"></script>
-    <title>Document</title>
+    <title>Ejemplo con Emits y componentes Hijos</title>
 </head>
 
 <body>
     <div id="app-4">
-
+        <h1>{{fecha}}</h1>
         <ul>
             <li class="lis" v-for="item in items" v-on:click="cambio">{{ item.text }} </li>
         </ul>
@@ -27,10 +26,59 @@
             <input type="text" name="" id="" v-model="message">
             <button type="submit" v-on:click="agrega">Agregar</button>
         </form>
-        <hijo v-bind:parrafo="parrafo"></hijo>
+
+        <hijo v-bind:parrafo="parrafo" v-on:envio="fecha = $event"></hijo>
     </div>
 
     <script src="index.js"></script>
 </body>
 
+<style>
+    *{
+    margin: 0px;
+    padding: 0px
+}
+h1{
+    text-align: center;
+}
+.lis{
+    margin: auto;
+    background-color: red;
+    text-align: center;
+    list-style: none;
+    padding: 5px;
+}
+.segunda{
+    margin: 10px 0px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+}
+.segunda *{
+    padding: 5px;
+    margin: 5px 0px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+    margin: 5px 0px;
+}
+form *{
+    margin: 5px 0px;
+}
+.ultimo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
+    color: white;
+}
+.ultimo *{
+    margin: 10px 0px;
+}
+</style>
 </html>

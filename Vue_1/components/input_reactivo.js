@@ -19,6 +19,9 @@ Vue.component('hijo',{
             now: new Date().toLocaleDateString()
         }
     },
+    mounted(){
+      this.$emit('envio', this.now);
+    },
     template:
     `
     <div class= "ultimo">

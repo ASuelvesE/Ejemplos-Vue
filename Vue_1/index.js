@@ -31,7 +31,8 @@ var app4 = new Vue({
           { text: 'Construir algooo incaaareíble' }
         ],
         parrafo: "Hola!!!",
-        message: ""
+        message: "",
+        fecha: ""
       }
     },
 
