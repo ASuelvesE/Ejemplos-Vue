@@ -34,34 +34,4 @@ var app4 = new Vue({
     },
 
   });
-  var app5 = new Vue({
-    el: '#app-5',
-    computed: { //Se ejecuta automáticamente a diferencia del methods
-        today(){
-            return this.tercero + " " + this.now;
-        }
-
-    },
-    methods: {
-      input(e){
-        this.tercero = e.target.value;
-      }
-    },
-    data: {
-      parrafo: "Hola!! ",
-      segundo: " ¿Que tal estas?",
-      tercero: "Hoy",
-      now: new Date().toLocaleDateString()
-    },
-    template:
-    `
-    <div class= "ultimo">
-        <div> {{ parrafo }} </div>
-        <div> {{ segundo }} </div>
-        <input type="text"  v-on:input = "input" ></input>
-        <div> {{ today }} </div>
-    </div>
-
-    `
   
-  });
