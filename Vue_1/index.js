@@ -19,6 +19,9 @@ var app4 = new Vue({
           this.items.push(
             { text: this.message }
           );
+      },
+      destruyeme(){
+        this.$destroy();
       }
       
     },

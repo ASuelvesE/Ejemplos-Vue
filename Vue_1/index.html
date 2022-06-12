@@ -28,15 +28,31 @@
         </form>
 
         <hijo v-bind:parrafo="parrafo" v-on:envio="fecha = $event"></hijo>
+        <div class="destruirlo">
+            <button id="btn_destroy" v-on:click="destruyeme">Destruir</button>
+        </div>
+
     </div>
 
     <script src="index.js"></script>
 </body>
 
 <style>
-    *{
+*{
     margin: 0px;
     padding: 0px
+}
+.destruirlo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#btn_destroy{
+    background-color: orange;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 h1{
     text-align: center;
