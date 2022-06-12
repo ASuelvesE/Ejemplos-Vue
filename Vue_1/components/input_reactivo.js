@@ -6,7 +6,6 @@ Vue.component('hijo',{
         today(){
             return this.tercero + " " + this.now;
         }
-
     },
     methods: {
       input(e){

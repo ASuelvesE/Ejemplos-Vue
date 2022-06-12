@@ -8,11 +8,11 @@ var app4 = new Vue({
         e.target.style.color="white";
       },
       saluda(){
-          if(this.parrafo == "buenas"){
-            this.parrafo = "adios";
+          if(this.parrafo == "Hola!!!"){
+            this.parrafo = "Adios!";
             
           }else{
-            this.parrafo = "buenas";
+            this.parrafo = "Hola!!!";
           }
       },
       agrega(){
@@ -22,15 +22,17 @@ var app4 = new Vue({
       }
       
     },
-    data: {
-      items: [
-        { text: 'Aprender JavaScript' },
-        { text: 'Aprender Vue' },
-        { text: 'Construir algo increíble' },
-        { text: 'Construir algooo incaaareíble' }
-      ],
-      parrafo: "buenas",
-      message: ""
+    data() {
+      return{
+        items: [
+          { text: 'Aprender JavaScript' },
+          { text: 'Aprender Vue' },
+          { text: 'Construir algo increíble' },
+          { text: 'Construir algooo incaaareíble' }
+        ],
+        parrafo: "Hola!!!",
+        message: ""
+      }
     },
 
   });

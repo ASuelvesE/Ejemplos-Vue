@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="components/hijo.js"></script>
+    <script src="components/input_reactivo.js"></script>
     <title>Document</title>
 </head>
 
@@ -27,7 +27,7 @@
             <input type="text" name="" id="" v-model="message">
             <button type="submit" v-on:click="agrega">Agregar</button>
         </form>
-        <hijo parrafo="Hola!! "></hijo>
+        <hijo v-bind:parrafo="parrafo"></hijo>
     </div>
 
     <script src="index.js"></script>
